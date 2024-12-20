@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/files
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update  # Options: none, validate, update, create-drop
+    show-sql: true      # To show SQL queries in logs
+    properties:
+      hibernate:
+        format_sql: true
+  application:
+    name: FileProcessingService
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework: INFO
+      hibernate: INFO
